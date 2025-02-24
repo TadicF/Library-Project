@@ -1,0 +1,341 @@
+/* Page Layout */
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+.container {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 1fr 4fr 0.25fr;
+}
+
+.footer {
+  background-color: rgb(228, 228, 228);
+}
+
+.header {
+  background-color: rgb(255, 255, 255);
+}
+
+.main {
+  background-color: rgb(241, 241, 241)
+}
+
+/* Header Styling */
+
+.header {
+  display: grid;
+  grid-template-rows: 0.5fr 1fr;
+  z-index: 10;
+  box-shadow: 0px 5px 5px #ccc;
+}
+
+.libraryTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.libraryTitle svg {
+  width: 50px;
+}
+
+.header-title {
+  font-family: "Roboto Semi-Bold", sans-serif;
+  font-size: 42px;
+}
+
+.libraryFunctions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.addBookBtn {
+  width: 220px;
+  height: 40px;
+  border: none;
+  background-color: rgb(0, 182, 0);
+  font-family: "Roboto Regular", sans-serif;
+  font-size: 16px;
+  border-radius: 10px;
+  color: white;
+  box-shadow: 0px 4px 5px #ccc;
+  transition: all 0.15s;
+  cursor: pointer;
+}
+
+.addBookBtn:hover {
+  scale: 1.05;
+  background-color: rgb(1, 209, 1);
+}
+
+.addBookBtn:active {
+  background-color: rgb(16, 223, 16);;
+}
+
+/* Footer Styling */
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 5px 0px 5px #b4b4b4;
+}
+
+.footer img {
+  width: 25px;
+  height: 25px;
+}
+
+.footer p {
+  font-family: "Roboto Regular", sans-serif;
+}
+
+/* Book Cards Styling / Main Styling */
+
+.main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, clamp(200px, 300px, 400px));
+  gap: 25px;
+  padding: 20px 20px;
+}
+
+.book-card {
+  background-color: rgb(216, 216, 216);
+  max-height: 300px;
+  box-shadow: 5px 5px 5px #ccc;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px 10px;
+  border-radius: 8px;
+}
+
+.titleContainer, .authorContainer, .pagesContainer, .readContainer, .ratingContainer {
+  display: grid;
+  grid-template-columns: 75px 1fr;
+  gap: 20px;
+  border-bottom: 1px solid rgb(187, 187, 187);
+  padding: 5px 5px;
+}
+
+.author, .pages, .rating, .read {
+  font-family: "Roboto Bold", sans-serif;
+  font-size: 20px;
+}
+
+.book-author, .book-pages, .book-rating, .book-read {
+  font-family: "Roboto Regular", sans-serif;
+  font-size: 18px;
+  justify-self: center;
+}
+
+.title {
+  font-family: "Roboto Bold", sans-serif;
+  font-size: 20px;
+}
+
+.book-title {
+  font-family: "Roboto Regular";
+  font-size: 18px;
+  justify-self: center;
+}
+
+.buttonContainer {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.readBtn {
+  background-color: rgb(48, 114, 255);
+  border: none;
+  color: white;
+  width: clamp(100px, 150px, 200px);
+  height: 40px;
+  border-radius: 10px;
+  color: white;
+  font-family: "Roboto Regular", sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.readBtn:hover {
+  scale: 1.05;
+  background-color: rgb(80, 135, 255);
+}
+
+.readBtn:active {
+  background-color: rgb(125, 166, 255);
+}
+
+.deleteBtn {
+  width: clamp(50px, 75px, 100px);
+  border: none;
+  color: white;
+  background-color: rgb(226, 31, 31);
+  height: 40px;
+  border-radius: 10px;
+  font-family: "Roboto Regular", sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.deleteBtn:hover {
+  scale: 1.05;
+  background-color: rgb(250, 59, 59);
+}
+
+.deleteBtn:active {
+  background-color: rgb(255, 119, 119);
+}
+
+/* Dialog Modal and Form Styling */
+
+form p {
+  font-family: "Roboto Bold", sans-serif;
+  font-size: 22px;
+  padding: 10px 10px;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 5px;
+  gap: 5px;
+}
+
+form div label {
+  font-family: "Roboto Regular", sans-serif;
+  font-size: 16px;
+}
+
+input[type="text"] {
+  padding: 5px 5px;
+  font-family: "Roboto Light", sans-serif;
+  border: 1px solid #e4e4e4;
+  border-radius: 5px;
+  transition: scale 0.15s;
+  background-color: white;
+}
+
+input[type="text"]:focus {
+  outline: 1px solid rgb(182, 226, 255);
+  scale: 1.05;
+  box-shadow: inset 0 0 5px #ade8f7;
+}
+
+input:-webkit-autofill { 
+  
+}
+
+.formButtons {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.cancelBtn {
+  background-color: red;
+  color: white
+}
+
+.cancelBtn:hover {
+  scale: 1.05;
+}
+
+.confirmBtn {
+  background-color: rgb(0, 230, 0);
+  color: white;
+}
+
+.confirmBtn:hover {
+  scale: 1.05;
+}
+
+.formButtons button {
+  width: 85px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  font-family: "Roboto Semi-Bold", sans-serif;
+  font-size: 14px;
+  transition: all 0.15s;
+  cursor: pointer;
+}
+
+dialog {
+  padding: 30px 20px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 2px 5px 5px #ccc;
+}
+
+dialog::backdrop {
+  background-color: #ebebeb;
+  opacity: 0.5;
+}
+
+.error {
+  color: rgb(218, 18, 18);
+}
+
+.error-message {
+  font-family: "Roboto Regular", sans-serif;
+  color: rgb(218, 18, 18);
+  font-size: 0.9em;
+  margin-top: 5px;
+  display: block;
+}
+
+/* Fonts */
+
+@font-face {
+  font-family: "Roboto Medium";
+  src: url(fonts/Roboto-Medium.ttf);
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Roboto Regular";
+  src: url(fonts/Roboto-Regular.ttf);
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Roboto Bold";
+  src: url(fonts/Roboto-Bold.ttf);
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Roboto Semi-Bold";
+  src: url(fonts/Roboto-SemiBold.ttf);
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Roboto Light";
+  src: url(fonts/Roboto-Light.ttf);
+  font-style: normal;
+  font-weight: 400;
+}

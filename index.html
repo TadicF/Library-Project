@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library Project</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="javascript.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="libraryTitle">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 3V18H12V3H9M12 5L16 18L19 17L15 4L12 5M5 5V18H8V5H5M3 19V21H21V19H3Z" /></svg>
+        <p class="header-title">Online Library</p>
+      </div>
+      <div class="libraryFunctions">
+        <button class="addBookBtn">Add Book to your Library</button>
+      </div>
+      <dialog id="dialog">
+        <form class="bookForm">
+          <p>Required Book Informations:</p>
+          <div>
+            <label for="title-input">What’s the title of the book?</label>
+            <input type="text" id="title-input" name="title-input" required autocomplete="off">
+          </div>
+          <div>
+            <label for="author-input">Who is the author?</label>
+            <input type="text" id="author-input" name="author-input" required autocomplete="off">
+          </div>
+          <div>
+            <label for="pages-input">How many pages does the book have?</label>
+            <input type="text" id="pages-input" name="pages-input" required autocomplete="off">
+          </div>
+          <div>
+            <label for="read-input"> Have you read this book? (Yes/No)</label>
+            <input type="text" id="read-input" name="read-input" pattern="[Yy][Ee][Ss]|[Nn][Oo]" required autocomplete="off">
+          </div>
+          <div>
+            <label for="rating-input">How would you rate this book on a scale of 0 to 10?</label>
+            <input type="text" id="rating-input" name="rating-input" pattern="10|[0-9]" required autocomplete="off">
+          </div>
+          <div class="formButtons">
+            <button class="cancelBtn" formmethod="dialog">Cancel</button>
+            <button class="confirmBtn">Confirm</button>
+          </div>
+        </form>
+      </dialog>
+    </header>
+    <main class="main">
+      <!-- Book card example
+      <div class="book-card">
+        <div class="titleContainer">
+          <div class="title">Title:</div>
+          <div class="book-title">Harry Potter</div>
+        </div>
+        <div class="authorContainer">
+          <div class="author">Author:</div>
+          <div class="book-author">J.K Rowling</div>
+        </div>
+        <div class="pagesContainer">
+          <div class="pages">Pages:</div>
+          <div class="book-pages">294</div>
+        </div>
+        <div class="readContainer">
+          <div class="read">Read:</div>
+          <div class="book-read">No</div>
+        </div>
+        <div class="ratingContainer">
+          <div class="rating">Rating:</div>
+          <div class="book-rating">7/10</div>
+        </div>
+        <div class="buttonContainer">
+          <button class="deleteBtn">Delete</button>
+          <button class="readBtn">Change Read Status</button>
+        </div>
+      </div>
+    -->
+    </main>
+    <footer class="footer">
+      <p>Made by TadicF</p>
+      <a href="https://github.com/TadicF/rock-paper-scissors/deployments/github-pages"><img src="images/github.png" alt="GitHub Profile"></a>
+    </footer>
+  </div>
+</body>
+</html>
