@@ -2,20 +2,22 @@ const myLibrary = [];
 let bookCount = 0;
 // To do: Check title inputs to make sure there are no multiple title's of same name
 
-function Book(title, author, pages, isRead, rating) {
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.isRead = isRead;
-  this.rating = rating;
-}
-
-Book.prototype.changeReadStatus = function() { 
-  if(this.isRead === true) {
-    this.isRead = false;
+class Book {
+  constructor(title, author, pages, isRead, rating) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.isRead = isRead;
+    this.rating = rating;
   }
-  else if(this.isRead === false) {
-    this.isRead = true;
+
+  changeReadStatus() {
+    if(this.isRead === true) {
+      this.isRead = false;
+    }
+    else if(this.isRead === false) {
+      this.isRead = true;
+    }
   }
 }
 

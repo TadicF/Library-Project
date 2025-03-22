@@ -240,10 +240,6 @@ input[type="text"]:focus {
   box-shadow: inset 0 0 5px #ade8f7;
 }
 
-input:-webkit-autofill { 
-  
-}
-
 .formButtons {
   display: flex;
   flex-direction: row;
